@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title> UNIMET MEMORY</title>
+</head>
+
+<body>
+    <div>
+        <div class="game">
+            <section class="tablero">
+
+                <table id= "gameTable">
+                    <tr>
+                        <td><button id="0" onclick="uncover(0)"></button> </td>
+                        <td><button id="1" onclick="uncover(1)"></button> </td>
+                        <td><button id="2" onclick="uncover(2)"></button> </td>
+                        <td><button id="3" onclick="uncover(3)"></button> </td>
+                    </tr>
+                    <tr>
+                        <td><button id="4" onclick="uncover(4)"></button> </td>
+                        <td><button id="5" onclick="uncover(5)"></button> </td>
+                        <td><button id="6" onclick="uncover(6)"></button> </td>
+                        <td><button id="7" onclick="uncover(7)"></button> </td>
+                    </tr>
+                    <tr>
+                        <td><button id="8" onclick="uncover(8)"></button> </td>
+                        <td><button id="9" onclick="uncover(9)"></button> </td>
+                        <td><button id="10" onclick="uncover(10)"></button> </td>
+                        <td><button id="11" onclick="uncover(11)"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="12" onclick="uncover(12)"></button> </td>
+                        <td><button id="13" onclick="uncover(13)"></button> </td>
+                        <td><button id="14" onclick="uncover(14)"></button></td>
+                        <td><button id="15" onclick="uncover(15)"></button> </td>
+                    </tr>
+                </table>
+            </section>
+            <section class="puntuaciones" >
+                <table class="table" id="scoreTable">
+                    <thead class="thead">
+                        <tr>
+                            <th class="th">N°</th>
+                            <th class="th">Usuario</th>
+                            <th class="th">Puntuacion</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody">
+                        <tr >
+                            <td class="td" id = "99">1</td>
+                            <td class="td" id = "98">----</td>
+                            <td class="td" id = "97">----</td>
+                        </tr>
+                        <tr >
+                            <td class="td" id = "96">2</td>
+                            <td class="td" id = "95">----</td>
+                            <td class="td" id = "94">----</td>
+                        </tr>
+                        <tr >
+                            <td class="td" id = "93">3</td>
+                            <td class="td" id = "92">----</td>
+                            <td class="td" id = "91">----</td>
+                        </tr>
+                        <tr >
+                            <td class="td" id = "90">4</td>
+                            <td class="td" id = "89">----</td>
+                            <td class="td" id = "88">----</td>
+                        </tr>
+                        <tr >
+                            <td class="td" id = "87">5</td>
+                            <td class="td" id = "86">----</td>
+                            <td class="td" id = "85">----</td>
+                        </tr>
+                        <tr >
+                            <td class="td" id = "84">6</td>
+                            <td class="td" id = "83">----</td>
+                            <td class="td" id = "82">----</td>
+                        </tr>
+                        <tr >
+                            <td class="td" id = "81">7</td>
+                            <td class="td" id = "80">----</td>
+                            <td class="td" id = "79">----</td>
+                        </tr>
+                        <tr >
+                            <td class="td" id = "78">8</td>
+                            <td class="td" id = "77">----</td>
+                            <td class="td" id = "76">----</td>
+                        </tr>
+                        <tr >
+                            <td class="td" id = "75">9</td>
+                            <td class="td" id = "74">----</td>
+                            <td class="td" id = "73">----</td>
+                        </tr>
+                        <tr >
+                            <td class="td" id = "72">10</td>
+                            <td class="td" id = "71">----</td>
+                            <td class="td" id = "70">----</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <section class="stats">
+            <h2 id="puntos" class="estadisticas"> Puntos: 0</h2>
+            <h2 id="t-restante" class="estadisticas"> Tiempo: 180 segundos</h2>
+            <h2 id="movimientos" class="estadisticas"> Movimientos: 0</h2>
+        </section>
+        <section class="entrada">
+            <input type="text" class="info-bar" id="info" placeholder="Ingresa nombre de usuario para empezar">
+            <button class="action-button" id="see-score" onclick="start()">Empezar</button>
+            <button class="action-button" id="reset" onclick="reset()">Reiniciar</button>
+            <button class="action-button" id="inicializate" onclick="score()">Ver Puntuacion</button>
+        </section>
+        <section class="header">
+            <h1>UNIMET MEMORY 🎴</h1>
+        </section>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
