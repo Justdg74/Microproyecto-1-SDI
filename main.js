@@ -14,12 +14,11 @@ let puntaje = 0;
 let puntajeMax = 100;
 let scoreList = [];
 
-//Apuntando a HTML
+//Apuntandores al HTML
 let showmoves = document.getElementById('movimientos');
 let showaciertos = document.getElementById('puntos');
 let showtime = document.getElementById('t-restante');
-
-//let username = document.getElementById('info');
+;
 
 let numbers = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
 numbers = numbers.sort(() => { return Math.random() - 0.5 });
@@ -127,43 +126,36 @@ function reset(){
 
 }
 
-// funcion principal
 
 function uncover(id) {
-
-    
-
-    
 
     uncoveredcards++;
 
     if (uncoveredcards == 1) {
-        // Mostrar el primer numero
+        
         card1 = document.getElementById(id);
         firstresult = numbers[id];
         card1.innerHTML = `<img src="./images/${firstresult}.jpg" alt="">`;
 
-        //Deshabilitar el primer boton
         card1.disabled = true;
 
     } else if (uncoveredcards == 2) {
-        // Mostrar segundo numero
+      
         card2 = document.getElementById(id);
         secondresult = numbers[id];
         card2.innerHTML = `<img src="./images/${secondresult}.jpg" alt="">`;
 
-        //Deshabilitar el segundo boton
+        
         card2.disabled = true;
 
-        //Incrementar movimientos
+     
         moves++;
         showmoves.innerHTML = `Movimientos: ${moves}`;
 
         if (firstresult == secondresult) {
-            //Encerar contador tarjetas destapadas
+            
             uncoveredcards = 0;
 
-            // Aumentar aciertos
             aciertos++;
             
             showaciertos.innerHTML = `Puntos: ${puntajeMax * (time / initialtime)}`;
@@ -179,7 +171,7 @@ function uncover(id) {
 
         } else {
 
-            //Mostrar momentaneamente valores y volver a tapar
+        
             setTimeout(() => {
                 card1.innerHTML = ' ';
                 card2.innerHTML = ' ';
